@@ -4,7 +4,11 @@ from pyopenstates import *
 from ratelimiter import RateLimiter
 import pandas as pd
 
-set_api_key('') # Get key here: https://openstates.org/api/register/
+import os
+# First put your key in an environment variable with:
+#   $ export OPENSTATESAPIKEY=<your_key>
+# This prevents it from accidentally getting saved and published in the code.
+set_api_key(os.environ['OPENSTATESAPIKEY']) # Get key here: https://openstates.org/api/register/
 
 bills_request = search_bills(state='tn', fields=['session', 'id', 'bill_id', 'title', 'sponsors', 'type', 'subjects'])
 
