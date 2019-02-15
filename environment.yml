@@ -1,0 +1,15 @@
+name: legisPy
+dependencies:
+    - python=3.6
+    - geopy=1.18
+    - jupyter=1.0.0
+    - nltk=3.2.5
+    - pandas=0.24.1
+    - requests=2.21.0
+    - scikit-learn=0.20.2
+    - scipy=1.2.0
+    - seaborn=0.9.0
+    - spacy=2.0.18
+    - pip:
+        - pyopenstates==1.2.0
+        - https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz
