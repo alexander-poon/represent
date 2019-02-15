@@ -1,0 +1,5 @@
+data/
+.idea
+*/.ipynb_checkpoints/
+presentations/images/
+presentations/*.html
