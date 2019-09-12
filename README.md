@@ -1,13 +1,27 @@
-## Civic Engagement with Data Science
+# represent 
 
-Search and recommendation and predictive models for state legislation. Inspired
-by a discussion at a [Code for Nashville](https://github.com/code-for-nashville)
-brigade meeting. Data from [OpenStates](https://openstates.org).
+Applying Natural Language Processing to extract interesting features from legislation.
+Data from [OpenStates](https://openstates.org).
 
-Using the OpenStates API requires an API key from
-https://openstates.org/api/register/.
+Features will be used in the [Swipe for Rights](https://github.com/coreyar/swipe-for-rights-api)
+app, which will:
 
-**Setup (conda)**
+* Allow users to express support/opposition to legislation  
+* Help users understand the content of legislation  
+* Provide actionable ways that users can respond to legislation  
+
+## Components
+
+* Topic modeling with bill text
+* Predictive modeling for bill outcomes
+
+## Requirements
+
+* An OpenStates API key from https://openstates.org/api/register/, saved as
+environment variable `OPENSTATES_API_KEY`
+* [pdftools](https://www.xpdfreader.com/download.html) to extract bill text
+
+## Setup
 
 Create a conda environment and install required packages:
 
@@ -15,48 +29,14 @@ Create a conda environment and install required packages:
 
 Activate the environment:
 
-`$ conda activate legisPy`
+`$ conda activate represent`
 
-Pull data from OpenStates bulk downloads:
+This should be sufficient to run the scripts in `py/` and notebooks in `notebooks/`.
 
-`$ python py/pull.py`
-
-This should be sufficient to run the scripts in `py/` and notebooks in
-`notebooks/`.
-
-To deactivate the conda environment:
+Deactivate the conda environment:
 
 `$ conda deactivate`
 
-To remove the conda environment:
+Remove the conda environment:
 
-`$ conda env remove --name legisPy`
-
-**Setup (virtualenv w/ python >= 3.6)**
-
-Create a virtual environment in `~/.virtualenvs`:
-
-`$ virtualenv ~/.virtualenvs/legisPy`
-
-Activate the virtualenv:
-
-`$ source ~/.virtualenvs/legisPy/bin/activate`
-
-Install required packages:
-
-`$ pip install -r requirements.txt`
-
-Pull data from OpenStates bulk downloads:
-
-`$ python py/pull.py`
-
-This should be sufficient to run the scripts in `py/` and notebooks in
-`notebooks/`.
-
-Deactivate the virtualenv:
-
-`$ deactivate`
-
-Delete the virtualenv:
-
-`$ rm -r ~/.virtualenvs/legisPy`
+`$ conda env remove --name represent`
