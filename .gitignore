@@ -1,5 +1,8 @@
+.idea/
 data/
-.idea
+models/
 */.ipynb_checkpoints/
+notebooks/*_topic.ipynb
 presentations/images/
 presentations/*.html
+presentations/*.key
