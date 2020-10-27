@@ -13,7 +13,7 @@ bz2file==0.98
 certifi==2019.9.11
 cffi==1.12.3
 chardet==3.0.4
-cryptography==2.7
+cryptography==3.2
 cycler==0.10.0
 cymem==2.0.2
 decorator==4.4.0
